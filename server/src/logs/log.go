@@ -14,7 +14,6 @@ import (
 )
 
 const (
-	// log message levels
 	LevelTrace = iota
 	LevelDebug
 	LevelInfo
@@ -25,7 +24,7 @@ const (
 
 type loggerType func() LoggerInterface
 
-// LoggerInterface defines the behavior of a log provider
+// LoggerInterface defines the behavior a log provider.
 type LoggerInterface interface {
 	Init(config string) error
 	WriteMsg(msg string, level int) error
@@ -36,26 +35,24 @@ type LoggerInterface interface {
 var adapters = make(map[string]loggerType)
 
 // Register makes a log provide available by the provided name
-// If register is called twice with the same name or if driver is nil,
-// it panics
-
+// If Register is called twice with the same name or if driver is nil, it panics
 func Register(name string, log loggerType) {
 	if log == nil {
-		panic("logs: register provide is nil")
+		panic("logs: Register provide is nil")
 	}
-
 	if _, dup := adapters[name]; dup {
-		panic("logs: register called twice for provider" + name)
+		panic("logs: Register called twice for provider" + name)
 	}
-
 	adapters[name] = log
 }
 
-type CashierLogger struct {
+// DefaltLogger is default logger in cashier app
+// it can contain several providers and log message into all providers
+type DefaltLogger struct {
 	lock                sync.Mutex
 	level               int
-	enableFuncCallDepth bool
-	loggerFucnCallDepth int
+	enableFunCallDepth  bool
+	loggerFuncCallDepth int
 	msg                 chan *logMsg
 	outputs             map[string]LoggerInterface
 }
@@ -65,150 +62,139 @@ type logMsg struct {
 	msg   string
 }
 
-// NewLogger return a new CashierLogger.
-// channellen means number of messages in chan
-// if the buffering chan is full, logger adapters write to files or other way
-func NewLogger(channellen int64) *CashierLogger {
-	cl := new(CashierLogger)
-	cl.loggerFucnCallDepth = 2
-	cl.msg = make(chan *logMsg, channellen)
-	cl.outputs = make(map[string]LoggerInterface)
-	go cl.StartLogger()
-	return cl
+func NewLogger(channellen int64) *DefaltLogger {
+	dl := new(DefaltLogger)
+	dl.loggerFuncCallDepth = 2
+	dl.msg = make(chan *logMsg, channellen)
+	dl.outputs = make(map[string]LoggerInterface)
+	go dl.startLogger()
+	return dl
 }
 
-// SetLogger provides a given logger adapter into CashierLogger with config string
-// config need to correct JSON as string : {"interval":360}
-func (cl *CashierLogger) SetLogger(adaptername string, config string) error {
-	cl.lock.Lock()
-	defer cl.lock.Unlock()
-	if log, ok := adapters[adaptername]; ok {
+func (dl *DefaltLogger) SetLogger(adatername string, config string) error {
+	dl.lock.Lock()
+	defer dl.lock.Unlock()
+	if log, ok := adapters[adatername]; ok {
 		lg := log()
 		err := lg.Init(config)
-		cl.outputs[adaptername] = lg
+		dl.outputs[adatername] = lg
 		if err != nil {
-			fmt.Println("logs.CashierLogger.SetLogger:" + err.Error())
+			fmt.Println("logs.DefaultLogger.SetLogger: " + err.Error())
 			return err
 		}
 	} else {
-		return fmt.Errorf("logs: unknown adaptername %q(forgotten Register?)", adaptername)
+		return fmt.Errorf("logs: unkown adaptname:%q(forgeten Register?)", adatername)
 	}
 	return nil
 }
 
-// remove a logger adapter in CashierLogger.
-func (cl *CashierLogger) DelLogger(adaptername string) error {
-	cl.lock.Lock()
-	defer cl.lock.Unlock()
-	if lg, ok := cl.outputs[adaptername]; ok {
+// remove a logger adapter in DefaltLogger
+func (dl *DefaltLogger) DelLogger(adaptername string) error {
+	dl.lock.Lock()
+	defer dl.lock.Unlock()
+	if lg, ok := dl.outputs[adaptername]; ok {
 		lg.Destroy()
-		delete(cl.outputs, adaptername)
+		delete(dl.outputs, adaptername)
 		return nil
 	} else {
-		return fmt.Errorf("logs: unknown adaptername %q (forgotten Register?", adaptername)
+		return fmt.Errorf("logs: unkown adaptername %q(forgotten Register)", adaptername)
 	}
-
 }
 
-func (cl *CashierLogger) WriteMsg(msg string, level int) error {
-	if cl.level > level {
+func (dl *DefaltLogger) writeMsg(loglevel int, msg string) error {
+	if dl.level > loglevel {
 		return nil
 	}
 	lm := new(logMsg)
-	lm.level = level
-	if cl.enableFuncCallDepth {
-		_, file, line, ok := runtime.Caller(cl.loggerFucnCallDepth)
+	lm.level = loglevel
+	if dl.enableFunCallDepth {
+		_, file, line, ok := runtime.Caller(dl.loggerFuncCallDepth)
 		if ok {
 			_, filename := path.Split(file)
-			lm.msg = fmt.Sprintf("[%s:%d]%s", filename, line, msg)
+			lm.msg = fmt.Sprintf("[%s:%d] %s", filename, line, msg)
 		} else {
 			lm.msg = msg
 		}
 	} else {
 		lm.msg = msg
 	}
-	cl.msg <- lm
+	dl.msg <- lm
 	return nil
 }
 
-// set log message level.
-// if message level (such as LevelTrace) is less than logger level (such as LevelWarn), ignore message
-func (cl *CashierLogger) SetLevel(l int) {
-	cl.level = l
+func (dl *DefaltLogger) Setlevel(l int) {
+	dl.level = l
 }
 
-// set log funcCallDepth
-func (cl *CashierLogger) SetLogFuncCallDepth(d int) {
-	cl.loggerFucnCallDepth = d
+func (dl *DefaltLogger) SetLogFuncCallDepth(d int) {
+	dl.loggerFuncCallDepth = d
 }
 
-// enable log funcCallDepth
-func (cl *CashierLogger) EnableFuncCallDepth(b bool) {
-	cl.enableFuncCallDepth = b
+func (dl *DefaltLogger) EnableFuncCallDepth(b bool) {
+	dl.enableFunCallDepth = b
 }
 
-func (cl *CashierLogger) StartLogger() {
+func (dl *DefaltLogger) startLogger() {
 	for {
 		select {
-		case cm := <-cl.msg:
-			for _, l := range cl.outputs {
-				l.WriteMsg(cm.msg, cm.level)
+		case dm := <-dl.msg:
+			for _, l := range dl.outputs {
+				l.WriteMsg(dm.msg, dm.level)
 			}
 		}
 	}
 }
 
-// log trace level message
-func (cl *CashierLogger) Trace(format string, v ...interface{}) {
-	msg := fmt.Sprintf("[T] "+format, v...)
-	cl.WriteMsg(msg, LevelTrace)
-}
-
-// log debug level message
-func (cl *CashierLogger) Debug(format string, v ...interface{}) {
-	msg := fmt.Sprintf("[D] "+format, v...)
-	cl.WriteMsg(msg, LevelDebug)
-}
-
-// log info level message
-func (cl *CashierLogger) Info(format string, v ...interface{}) {
-	msg := fmt.Sprintf("[I] "+format, v...)
-	cl.WriteMsg(msg, LevelInfo)
-}
-
-// log error level message
-func (cl *CashierLogger) Error(format string, v ...interface{}) {
-	msg := fmt.Sprintf("[E] "+format, v...)
-	cl.WriteMsg(msg, LevelError)
-}
-
-// log critical level message
-func (cl *CashierLogger) Critical(format string, v ...interface{}) {
-	msg := fmt.Sprintf("[C] "+format, v...)
-	cl.WriteMsg(msg, LevelCritical)
-}
-
-// flush all chan data
-func (cl *CashierLogger) flush() {
-	for _, l := range cl.outputs {
-		l.Flush()
-	}
-}
-
-// close logger, flush all chan data and destroy all adapters in cashierLogger
-func (cl *CashierLogger) Close() {
+func (dl *DefaltLogger) Close() {
 	for {
-		if len(cl.msg) > 0 {
-			cm := <-cl.msg
-			for _, l := range cl.outputs {
-				l.WriteMsg(cm.msg, cm.level)
+		if len(dl.msg) > 0 {
+			bm := <-dl.msg
+			for _, l := range dl.outputs {
+				l.WriteMsg(bm.msg, bm.level)
 			}
 		} else {
 			break
 		}
 	}
-	for _, l := range cl.outputs {
+
+	for _, l := range dl.outputs {
 		l.Flush()
 		l.Destroy()
 	}
+}
+
+// log trace level message.
+func (dl *DefaltLogger) Trace(format string, v ...interface{}) {
+	msg := fmt.Sprintf("[T] "+format, v...)
+	dl.writeMsg(LevelTrace, msg)
+}
+
+// log debug level message.
+func (dl *DefaltLogger) Debug(format string, v ...interface{}) {
+	msg := fmt.Sprintf("[D] "+format, v...)
+	dl.writeMsg(LevelDebug, msg)
+}
+
+// log info level message.
+func (dl *DefaltLogger) Info(format string, v ...interface{}) {
+	msg := fmt.Sprintf("[I] "+format, v...)
+	dl.writeMsg(LevelInfo, msg)
+}
+
+// log warn level message.
+func (dl *DefaltLogger) Warn(format string, v ...interface{}) {
+	msg := fmt.Sprintf("[W] "+format, v...)
+	dl.writeMsg(LevelWarn, msg)
+}
+
+// log error level message.
+func (dl *DefaltLogger) Error(format string, v ...interface{}) {
+	msg := fmt.Sprintf("[E] "+format, v...)
+	dl.writeMsg(LevelError, msg)
+}
+
+// log critical level message.
+func (dl *DefaltLogger) Critical(format string, v ...interface{}) {
+	msg := fmt.Sprintf("[C] "+format, v...)
+	dl.writeMsg(LevelCritical, msg)
 }

@@ -18,6 +18,7 @@ const (
 	subjectPhrase = "Diagnostic message from server"
 )
 
+// smtpWriter implements LoggerInterface and is used to send emails via given SMTP-server.
 type SmtpWriter struct {
 	Username           string   `json:"Username"`
 	Password           string   `json:"password"`
@@ -27,21 +28,21 @@ type SmtpWriter struct {
 	Level              int      `json:"level"`
 }
 
+// create smtp writer.
 func NewSmtpWriter() LoggerInterface {
 	return &SmtpWriter{Level: LevelTrace}
 }
 
-// init SmtpWriter with json config
-// config like :
-// {
-//	  "UserName":"example@gmail.com"
-//	  "password":"password"
-//    "host":"smtp.gmail.com:465"
-//	  "subject":"email title"
-//    "sendTos": ["email1", "email2"],
-//	  "level" :LevelError
-// }
-
+// init smtp writer with json config.
+// config like:
+//	{
+//		"Username":"example@gmail.com",
+//		"password:"password",
+//		"host":"smtp.gmail.com:465",
+//		"subject":"email title",
+//		"sendTos":["email1","email2"],
+//		"level":LevelError
+//	}
 func (s *SmtpWriter) Init(jsonconfig string) error {
 	err := json.Unmarshal([]byte(jsonconfig), s)
 	if err != nil {
@@ -50,8 +51,8 @@ func (s *SmtpWriter) Init(jsonconfig string) error {
 	return nil
 }
 
-// write message in smtp writer
-// it will send an email with subject and this message.
+// write message in smtp writer.
+// it will send an email with subject and only this message.
 func (s *SmtpWriter) WriteMsg(msg string, level int) error {
 	if level < s.Level {
 		return nil
@@ -64,27 +65,35 @@ func (s *SmtpWriter) WriteMsg(msg string, level int) error {
 		"",
 		s.Username,
 		s.Password,
-		hp[0])
-	// Connect to the server, authenticate, set the sender and recipient
-	// and Send the mail all in one step
-	content_type := "Content-type: text/plain" + "; charset=UTF-8"
+		hp[0],
+	)
+	// Connect to the server, authenticate, set the sender and recipient,
+	// and send the email all in one step.
+	content_type := "Content-Type: text/plain" + "; charset=UTF-8"
 	mailmsg := []byte("To: " + strings.Join(s.RecipientAddresses, ";") + "\r\nFrom: " + s.Username + "<" + s.Username +
-		">\r\nsubject: " + s.Subject + "\r\n" + content_type + "\r\n\r\n" + fmt.Sprintf(".%s", time.Now().Format("2006-01-02 15:04:05")) + msg)
-	err := smtp.SendMail(s.Host, auth, s.Username, s.RecipientAddresses, mailmsg)
+		">\r\nSubject: " + s.Subject + "\r\n" + content_type + "\r\n\r\n" + fmt.Sprintf(".%s", time.Now().Format("2006-01-02 15:04:05")) + msg)
+
+	err := smtp.SendMail(
+		s.Host,
+		auth,
+		s.Username,
+		s.RecipientAddresses,
+		mailmsg,
+	)
+
 	return err
 }
 
-// implementing method .empty
+// implementing method. empty.
 func (s *SmtpWriter) Flush() {
 	return
 }
 
-// implementing method. empty
+// implementing method. empty.
 func (s *SmtpWriter) Destroy() {
 	return
 }
 
-func Init() {
+func init() {
 	Register("smtp", NewSmtpWriter)
-
 }

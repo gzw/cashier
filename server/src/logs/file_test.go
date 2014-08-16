@@ -8,12 +8,11 @@ import (
 	"time"
 )
 
-func TestFile(t *testing.T) {
-	fmt.Println("start TestFile--------------!")
+func Testfile(t *testing.T) {
+	fmt.Println("start--------------!")
 	log := NewLogger(1000)
-	log.SetLogger("file", `{"filename":"test.log"}`)
+	log.SetLogger("file", "test.log")
 	log.Trace("trace")
-	fmt.Println("1")
 	log.Info("info")
 	log.Debug("debug")
 	log.Warn("warn")
@@ -39,29 +38,20 @@ func TestFile(t *testing.T) {
 		fmt.Println(string(line))
 	}
 
-	// if linenum != 5 {
+	// b := bufio.NewReader(f)
+	// linenum := 0
+	// for {
+	// 	line, _, err := b.ReadLine()
+	// 	if err != nil {
+	// 		break
+	// 	}
+	// 	if len(line) > 0 {
+	// 		linenum++
+	// 	}
+	// }
+	// if linenum != 6 {
 	// 	t.Fatal(linenum, "not line 6")
 	// }
-	os.Remove("test.go")
-}
+	// os.Remove("test.log")
 
-func TestFileRotate(t *testing.T) {
-	log := NewLogger(10000)
-	log.SetLogger("file", `{"filename":"test3.log","maxlines":4}`)
-	log.Trace("test")
-	log.Info("info")
-	log.Debug("debug")
-	log.Warn("warning")
-	log.Error("error")
-	log.Critical("critical")
-	time.Sleep(time.Second * 4)
-}
-
-func BenchmarkFile(b *testing.B) {
-	log := NewLogger(100000)
-	log.SetLogger("file", `{"filename":"test4.log"}`)
-	for i := 0; i < b.N; i++ {
-		log.Trace("trace")
-	}
-	os.Remove("test4.log")
 }
