@@ -7,147 +7,150 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		049CF88919989C3B000EA8EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049CF88819989C3B000EA8EC /* Foundation.framework */; };
-		049CF88B19989C3B000EA8EC /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049CF88A19989C3B000EA8EC /* CoreGraphics.framework */; };
-		049CF88D19989C3B000EA8EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049CF88C19989C3B000EA8EC /* UIKit.framework */; };
-		049CF89319989C3B000EA8EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 049CF89119989C3B000EA8EC /* InfoPlist.strings */; };
-		049CF89519989C3B000EA8EC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 049CF89419989C3B000EA8EC /* main.m */; };
-		049CF89919989C3B000EA8EC /* ZWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 049CF89819989C3B000EA8EC /* ZWAppDelegate.m */; };
-		049CF89C19989C3B000EA8EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 049CF89A19989C3B000EA8EC /* Main.storyboard */; };
-		049CF89F19989C3B000EA8EC /* ZWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 049CF89E19989C3B000EA8EC /* ZWViewController.m */; };
-		049CF8A119989C3B000EA8EC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 049CF8A019989C3B000EA8EC /* Images.xcassets */; };
-		049CF8A819989C3C000EA8EC /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049CF8A719989C3C000EA8EC /* XCTest.framework */; };
-		049CF8A919989C3C000EA8EC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049CF88819989C3B000EA8EC /* Foundation.framework */; };
-		049CF8AA19989C3C000EA8EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049CF88C19989C3B000EA8EC /* UIKit.framework */; };
-		049CF8B219989C3C000EA8EC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 049CF8B019989C3C000EA8EC /* InfoPlist.strings */; };
-		049CF8B419989C3C000EA8EC /* cashierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 049CF8B319989C3C000EA8EC /* cashierTests.m */; };
+		7D57473519A4E78C001A1418 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D57473419A4E78C001A1418 /* Foundation.framework */; };
+		7D57473719A4E78C001A1418 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D57473619A4E78C001A1418 /* CoreGraphics.framework */; };
+		7D57473919A4E78C001A1418 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D57473819A4E78C001A1418 /* UIKit.framework */; };
+		7D57473F19A4E78C001A1418 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D57473D19A4E78C001A1418 /* InfoPlist.strings */; };
+		7D57474119A4E78C001A1418 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D57474019A4E78C001A1418 /* main.m */; };
+		7D57474519A4E78C001A1418 /* ZWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D57474419A4E78C001A1418 /* ZWAppDelegate.m */; };
+		7D57474819A4E78C001A1418 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D57474619A4E78C001A1418 /* Main_iPhone.storyboard */; };
+		7D57474B19A4E78C001A1418 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D57474919A4E78C001A1418 /* Main_iPad.storyboard */; };
+		7D57474E19A4E78C001A1418 /* ZWViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D57474D19A4E78C001A1418 /* ZWViewController.m */; };
+		7D57475019A4E78C001A1418 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D57474F19A4E78C001A1418 /* Images.xcassets */; };
+		7D57475719A4E78C001A1418 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D57475619A4E78C001A1418 /* XCTest.framework */; };
+		7D57475819A4E78C001A1418 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D57473419A4E78C001A1418 /* Foundation.framework */; };
+		7D57475919A4E78C001A1418 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D57473819A4E78C001A1418 /* UIKit.framework */; };
+		7D57476119A4E78C001A1418 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7D57475F19A4E78C001A1418 /* InfoPlist.strings */; };
+		7D57476319A4E78C001A1418 /* cashierTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7D57476219A4E78C001A1418 /* cashierTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		049CF8AB19989C3C000EA8EC /* PBXContainerItemProxy */ = {
+		7D57475A19A4E78C001A1418 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 049CF87D19989C3B000EA8EC /* Project object */;
+			containerPortal = 7D57472919A4E78C001A1418 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 049CF88419989C3B000EA8EC;
+			remoteGlobalIDString = 7D57473019A4E78C001A1418;
 			remoteInfo = cashier;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		049CF88519989C3B000EA8EC /* cashier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cashier.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		049CF88819989C3B000EA8EC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		049CF88A19989C3B000EA8EC /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		049CF88C19989C3B000EA8EC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		049CF89019989C3B000EA8EC /* cashier-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "cashier-Info.plist"; sourceTree = "<group>"; };
-		049CF89219989C3B000EA8EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		049CF89419989C3B000EA8EC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		049CF89619989C3B000EA8EC /* cashier-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cashier-Prefix.pch"; sourceTree = "<group>"; };
-		049CF89719989C3B000EA8EC /* ZWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWAppDelegate.h; sourceTree = "<group>"; };
-		049CF89819989C3B000EA8EC /* ZWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWAppDelegate.m; sourceTree = "<group>"; };
-		049CF89B19989C3B000EA8EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		049CF89D19989C3B000EA8EC /* ZWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWViewController.h; sourceTree = "<group>"; };
-		049CF89E19989C3B000EA8EC /* ZWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWViewController.m; sourceTree = "<group>"; };
-		049CF8A019989C3B000EA8EC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		049CF8A619989C3C000EA8EC /* cashierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cashierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		049CF8A719989C3C000EA8EC /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		049CF8AF19989C3C000EA8EC /* cashierTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "cashierTests-Info.plist"; sourceTree = "<group>"; };
-		049CF8B119989C3C000EA8EC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		049CF8B319989C3C000EA8EC /* cashierTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cashierTests.m; sourceTree = "<group>"; };
+		7D57473119A4E78C001A1418 /* cashier.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cashier.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D57473419A4E78C001A1418 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		7D57473619A4E78C001A1418 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		7D57473819A4E78C001A1418 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		7D57473C19A4E78C001A1418 /* cashier-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "cashier-Info.plist"; sourceTree = "<group>"; };
+		7D57473E19A4E78C001A1418 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7D57474019A4E78C001A1418 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		7D57474219A4E78C001A1418 /* cashier-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "cashier-Prefix.pch"; sourceTree = "<group>"; };
+		7D57474319A4E78C001A1418 /* ZWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWAppDelegate.h; sourceTree = "<group>"; };
+		7D57474419A4E78C001A1418 /* ZWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWAppDelegate.m; sourceTree = "<group>"; };
+		7D57474719A4E78C001A1418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		7D57474A19A4E78C001A1418 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		7D57474C19A4E78C001A1418 /* ZWViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZWViewController.h; sourceTree = "<group>"; };
+		7D57474D19A4E78C001A1418 /* ZWViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZWViewController.m; sourceTree = "<group>"; };
+		7D57474F19A4E78C001A1418 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		7D57475519A4E78C001A1418 /* cashierTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cashierTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7D57475619A4E78C001A1418 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		7D57475E19A4E78C001A1418 /* cashierTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "cashierTests-Info.plist"; sourceTree = "<group>"; };
+		7D57476019A4E78C001A1418 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		7D57476219A4E78C001A1418 /* cashierTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cashierTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		049CF88219989C3B000EA8EC /* Frameworks */ = {
+		7D57472E19A4E78C001A1418 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				049CF88B19989C3B000EA8EC /* CoreGraphics.framework in Frameworks */,
-				049CF88D19989C3B000EA8EC /* UIKit.framework in Frameworks */,
-				049CF88919989C3B000EA8EC /* Foundation.framework in Frameworks */,
+				7D57473719A4E78C001A1418 /* CoreGraphics.framework in Frameworks */,
+				7D57473919A4E78C001A1418 /* UIKit.framework in Frameworks */,
+				7D57473519A4E78C001A1418 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		049CF8A319989C3C000EA8EC /* Frameworks */ = {
+		7D57475219A4E78C001A1418 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				049CF8A819989C3C000EA8EC /* XCTest.framework in Frameworks */,
-				049CF8AA19989C3C000EA8EC /* UIKit.framework in Frameworks */,
-				049CF8A919989C3C000EA8EC /* Foundation.framework in Frameworks */,
+				7D57475719A4E78C001A1418 /* XCTest.framework in Frameworks */,
+				7D57475919A4E78C001A1418 /* UIKit.framework in Frameworks */,
+				7D57475819A4E78C001A1418 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		049CF87C19989C3B000EA8EC = {
+		7D57472819A4E78C001A1418 = {
 			isa = PBXGroup;
 			children = (
-				049CF88E19989C3B000EA8EC /* cashier */,
-				049CF8AD19989C3C000EA8EC /* cashierTests */,
-				049CF88719989C3B000EA8EC /* Frameworks */,
-				049CF88619989C3B000EA8EC /* Products */,
+				7D57473A19A4E78C001A1418 /* cashier */,
+				7D57475C19A4E78C001A1418 /* cashierTests */,
+				7D57473319A4E78C001A1418 /* Frameworks */,
+				7D57473219A4E78C001A1418 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		049CF88619989C3B000EA8EC /* Products */ = {
+		7D57473219A4E78C001A1418 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				049CF88519989C3B000EA8EC /* cashier.app */,
-				049CF8A619989C3C000EA8EC /* cashierTests.xctest */,
+				7D57473119A4E78C001A1418 /* cashier.app */,
+				7D57475519A4E78C001A1418 /* cashierTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		049CF88719989C3B000EA8EC /* Frameworks */ = {
+		7D57473319A4E78C001A1418 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				049CF88819989C3B000EA8EC /* Foundation.framework */,
-				049CF88A19989C3B000EA8EC /* CoreGraphics.framework */,
-				049CF88C19989C3B000EA8EC /* UIKit.framework */,
-				049CF8A719989C3C000EA8EC /* XCTest.framework */,
+				7D57473419A4E78C001A1418 /* Foundation.framework */,
+				7D57473619A4E78C001A1418 /* CoreGraphics.framework */,
+				7D57473819A4E78C001A1418 /* UIKit.framework */,
+				7D57475619A4E78C001A1418 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		049CF88E19989C3B000EA8EC /* cashier */ = {
+		7D57473A19A4E78C001A1418 /* cashier */ = {
 			isa = PBXGroup;
 			children = (
-				049CF89719989C3B000EA8EC /* ZWAppDelegate.h */,
-				049CF89819989C3B000EA8EC /* ZWAppDelegate.m */,
-				049CF89A19989C3B000EA8EC /* Main.storyboard */,
-				049CF89D19989C3B000EA8EC /* ZWViewController.h */,
-				049CF89E19989C3B000EA8EC /* ZWViewController.m */,
-				049CF8A019989C3B000EA8EC /* Images.xcassets */,
-				049CF88F19989C3B000EA8EC /* Supporting Files */,
+				7D57474319A4E78C001A1418 /* ZWAppDelegate.h */,
+				7D57474419A4E78C001A1418 /* ZWAppDelegate.m */,
+				7D57474619A4E78C001A1418 /* Main_iPhone.storyboard */,
+				7D57474919A4E78C001A1418 /* Main_iPad.storyboard */,
+				7D57474C19A4E78C001A1418 /* ZWViewController.h */,
+				7D57474D19A4E78C001A1418 /* ZWViewController.m */,
+				7D57474F19A4E78C001A1418 /* Images.xcassets */,
+				7D57473B19A4E78C001A1418 /* Supporting Files */,
 			);
 			path = cashier;
 			sourceTree = "<group>";
 		};
-		049CF88F19989C3B000EA8EC /* Supporting Files */ = {
+		7D57473B19A4E78C001A1418 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				049CF89019989C3B000EA8EC /* cashier-Info.plist */,
-				049CF89119989C3B000EA8EC /* InfoPlist.strings */,
-				049CF89419989C3B000EA8EC /* main.m */,
-				049CF89619989C3B000EA8EC /* cashier-Prefix.pch */,
+				7D57473C19A4E78C001A1418 /* cashier-Info.plist */,
+				7D57473D19A4E78C001A1418 /* InfoPlist.strings */,
+				7D57474019A4E78C001A1418 /* main.m */,
+				7D57474219A4E78C001A1418 /* cashier-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		049CF8AD19989C3C000EA8EC /* cashierTests */ = {
+		7D57475C19A4E78C001A1418 /* cashierTests */ = {
 			isa = PBXGroup;
 			children = (
-				049CF8B319989C3C000EA8EC /* cashierTests.m */,
-				049CF8AE19989C3C000EA8EC /* Supporting Files */,
+				7D57476219A4E78C001A1418 /* cashierTests.m */,
+				7D57475D19A4E78C001A1418 /* Supporting Files */,
 			);
 			path = cashierTests;
 			sourceTree = "<group>";
 		};
-		049CF8AE19989C3C000EA8EC /* Supporting Files */ = {
+		7D57475D19A4E78C001A1418 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				049CF8AF19989C3C000EA8EC /* cashierTests-Info.plist */,
-				049CF8B019989C3C000EA8EC /* InfoPlist.strings */,
+				7D57475E19A4E78C001A1418 /* cashierTests-Info.plist */,
+				7D57475F19A4E78C001A1418 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -155,13 +158,13 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		049CF88419989C3B000EA8EC /* cashier */ = {
+		7D57473019A4E78C001A1418 /* cashier */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 049CF8B719989C3C000EA8EC /* Build configuration list for PBXNativeTarget "cashier" */;
+			buildConfigurationList = 7D57476619A4E78C001A1418 /* Build configuration list for PBXNativeTarget "cashier" */;
 			buildPhases = (
-				049CF88119989C3B000EA8EC /* Sources */,
-				049CF88219989C3B000EA8EC /* Frameworks */,
-				049CF88319989C3B000EA8EC /* Resources */,
+				7D57472D19A4E78C001A1418 /* Sources */,
+				7D57472E19A4E78C001A1418 /* Frameworks */,
+				7D57472F19A4E78C001A1418 /* Resources */,
 			);
 			buildRules = (
 			);
@@ -169,43 +172,43 @@
 			);
 			name = cashier;
 			productName = cashier;
-			productReference = 049CF88519989C3B000EA8EC /* cashier.app */;
+			productReference = 7D57473119A4E78C001A1418 /* cashier.app */;
 			productType = "com.apple.product-type.application";
 		};
-		049CF8A519989C3C000EA8EC /* cashierTests */ = {
+		7D57475419A4E78C001A1418 /* cashierTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 049CF8BA19989C3C000EA8EC /* Build configuration list for PBXNativeTarget "cashierTests" */;
+			buildConfigurationList = 7D57476919A4E78C001A1418 /* Build configuration list for PBXNativeTarget "cashierTests" */;
 			buildPhases = (
-				049CF8A219989C3C000EA8EC /* Sources */,
-				049CF8A319989C3C000EA8EC /* Frameworks */,
-				049CF8A419989C3C000EA8EC /* Resources */,
+				7D57475119A4E78C001A1418 /* Sources */,
+				7D57475219A4E78C001A1418 /* Frameworks */,
+				7D57475319A4E78C001A1418 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				049CF8AC19989C3C000EA8EC /* PBXTargetDependency */,
+				7D57475B19A4E78C001A1418 /* PBXTargetDependency */,
 			);
 			name = cashierTests;
 			productName = cashierTests;
-			productReference = 049CF8A619989C3C000EA8EC /* cashierTests.xctest */;
+			productReference = 7D57475519A4E78C001A1418 /* cashierTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		049CF87D19989C3B000EA8EC /* Project object */ = {
+		7D57472919A4E78C001A1418 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = ZW;
 				LastUpgradeCheck = 0510;
-				ORGANIZATIONNAME = zwtech;
+				ORGANIZATIONNAME = zw;
 				TargetAttributes = {
-					049CF8A519989C3C000EA8EC = {
-						TestTargetID = 049CF88419989C3B000EA8EC;
+					7D57475419A4E78C001A1418 = {
+						TestTargetID = 7D57473019A4E78C001A1418;
 					};
 				};
 			};
-			buildConfigurationList = 049CF88019989C3B000EA8EC /* Build configuration list for PBXProject "cashier" */;
+			buildConfigurationList = 7D57472C19A4E78C001A1418 /* Build configuration list for PBXProject "cashier" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -213,88 +216,97 @@
 				en,
 				Base,
 			);
-			mainGroup = 049CF87C19989C3B000EA8EC;
-			productRefGroup = 049CF88619989C3B000EA8EC /* Products */;
+			mainGroup = 7D57472819A4E78C001A1418;
+			productRefGroup = 7D57473219A4E78C001A1418 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				049CF88419989C3B000EA8EC /* cashier */,
-				049CF8A519989C3C000EA8EC /* cashierTests */,
+				7D57473019A4E78C001A1418 /* cashier */,
+				7D57475419A4E78C001A1418 /* cashierTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		049CF88319989C3B000EA8EC /* Resources */ = {
+		7D57472F19A4E78C001A1418 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				049CF8A119989C3B000EA8EC /* Images.xcassets in Resources */,
-				049CF89319989C3B000EA8EC /* InfoPlist.strings in Resources */,
-				049CF89C19989C3B000EA8EC /* Main.storyboard in Resources */,
+				7D57474B19A4E78C001A1418 /* Main_iPad.storyboard in Resources */,
+				7D57475019A4E78C001A1418 /* Images.xcassets in Resources */,
+				7D57474819A4E78C001A1418 /* Main_iPhone.storyboard in Resources */,
+				7D57473F19A4E78C001A1418 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		049CF8A419989C3C000EA8EC /* Resources */ = {
+		7D57475319A4E78C001A1418 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				049CF8B219989C3C000EA8EC /* InfoPlist.strings in Resources */,
+				7D57476119A4E78C001A1418 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		049CF88119989C3B000EA8EC /* Sources */ = {
+		7D57472D19A4E78C001A1418 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				049CF89519989C3B000EA8EC /* main.m in Sources */,
-				049CF89919989C3B000EA8EC /* ZWAppDelegate.m in Sources */,
-				049CF89F19989C3B000EA8EC /* ZWViewController.m in Sources */,
+				7D57474119A4E78C001A1418 /* main.m in Sources */,
+				7D57474519A4E78C001A1418 /* ZWAppDelegate.m in Sources */,
+				7D57474E19A4E78C001A1418 /* ZWViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		049CF8A219989C3C000EA8EC /* Sources */ = {
+		7D57475119A4E78C001A1418 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				049CF8B419989C3C000EA8EC /* cashierTests.m in Sources */,
+				7D57476319A4E78C001A1418 /* cashierTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		049CF8AC19989C3C000EA8EC /* PBXTargetDependency */ = {
+		7D57475B19A4E78C001A1418 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 049CF88419989C3B000EA8EC /* cashier */;
-			targetProxy = 049CF8AB19989C3C000EA8EC /* PBXContainerItemProxy */;
+			target = 7D57473019A4E78C001A1418 /* cashier */;
+			targetProxy = 7D57475A19A4E78C001A1418 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		049CF89119989C3B000EA8EC /* InfoPlist.strings */ = {
+		7D57473D19A4E78C001A1418 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				049CF89219989C3B000EA8EC /* en */,
+				7D57473E19A4E78C001A1418 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		049CF89A19989C3B000EA8EC /* Main.storyboard */ = {
+		7D57474619A4E78C001A1418 /* Main_iPhone.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				049CF89B19989C3B000EA8EC /* Base */,
+				7D57474719A4E78C001A1418 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
 		};
-		049CF8B019989C3C000EA8EC /* InfoPlist.strings */ = {
+		7D57474919A4E78C001A1418 /* Main_iPad.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				049CF8B119989C3C000EA8EC /* en */,
+				7D57474A19A4E78C001A1418 /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		7D57475F19A4E78C001A1418 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7D57476019A4E78C001A1418 /* en */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -302,7 +314,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		049CF8B519989C3C000EA8EC /* Debug */ = {
+		7D57476419A4E78C001A1418 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -337,10 +349,11 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		049CF8B619989C3C000EA8EC /* Release */ = {
+		7D57476519A4E78C001A1418 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -368,11 +381,12 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
-		049CF8B819989C3C000EA8EC /* Debug */ = {
+		7D57476719A4E78C001A1418 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -385,7 +399,7 @@
 			};
 			name = Debug;
 		};
-		049CF8B919989C3C000EA8EC /* Release */ = {
+		7D57476819A4E78C001A1418 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
@@ -398,7 +412,7 @@
 			};
 			name = Release;
 		};
-		049CF8BB19989C3C000EA8EC /* Debug */ = {
+		7D57476A19A4E78C001A1418 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/cashier.app/cashier";
@@ -420,7 +434,7 @@
 			};
 			name = Debug;
 		};
-		049CF8BC19989C3C000EA8EC /* Release */ = {
+		7D57476B19A4E78C001A1418 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/cashier.app/cashier";
@@ -441,32 +455,32 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		049CF88019989C3B000EA8EC /* Build configuration list for PBXProject "cashier" */ = {
+		7D57472C19A4E78C001A1418 /* Build configuration list for PBXProject "cashier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				049CF8B519989C3C000EA8EC /* Debug */,
-				049CF8B619989C3C000EA8EC /* Release */,
+				7D57476419A4E78C001A1418 /* Debug */,
+				7D57476519A4E78C001A1418 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		049CF8B719989C3C000EA8EC /* Build configuration list for PBXNativeTarget "cashier" */ = {
+		7D57476619A4E78C001A1418 /* Build configuration list for PBXNativeTarget "cashier" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				049CF8B819989C3C000EA8EC /* Debug */,
-				049CF8B919989C3C000EA8EC /* Release */,
+				7D57476719A4E78C001A1418 /* Debug */,
+				7D57476819A4E78C001A1418 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
-		049CF8BA19989C3C000EA8EC /* Build configuration list for PBXNativeTarget "cashierTests" */ = {
+		7D57476919A4E78C001A1418 /* Build configuration list for PBXNativeTarget "cashierTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				049CF8BB19989C3C000EA8EC /* Debug */,
-				049CF8BC19989C3C000EA8EC /* Release */,
+				7D57476A19A4E78C001A1418 /* Debug */,
+				7D57476B19A4E78C001A1418 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 049CF87D19989C3B000EA8EC /* Project object */;
+	rootObject = 7D57472919A4E78C001A1418 /* Project object */;
 }
