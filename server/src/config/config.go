@@ -1,3 +1,8 @@
+//cashier
+
+//@description cashier system
+//@link https://github.com/gzw/cashier
+//@authors gzw
 package config
 
 import (
@@ -22,7 +27,7 @@ type Config interface {
 var adapters = make(map[string]Config)
 
 func Register(name string, adapter Config) {
-	if adapte == nil {
+	if adapter == nil {
 		panic("Config: Register adapter is nil")
 	}
 	if _, dup := adapters[name]; dup {
