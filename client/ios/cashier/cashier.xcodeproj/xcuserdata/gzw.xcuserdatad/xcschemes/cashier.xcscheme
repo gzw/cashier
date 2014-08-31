@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "049CF88419989C3B000EA8EC"
+               BlueprintIdentifier = "7D57473019A4E78C001A1418"
                BuildableName = "cashier.app"
                BlueprintName = "cashier"
                ReferencedContainer = "container:cashier.xcodeproj">
@@ -32,7 +32,7 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "049CF8A519989C3C000EA8EC"
+               BlueprintIdentifier = "7D57475419A4E78C001A1418"
                BuildableName = "cashierTests.xctest"
                BlueprintName = "cashierTests"
                ReferencedContainer = "container:cashier.xcodeproj">
@@ -42,7 +42,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "049CF88419989C3B000EA8EC"
+            BlueprintIdentifier = "7D57473019A4E78C001A1418"
             BuildableName = "cashier.app"
             BlueprintName = "cashier"
             ReferencedContainer = "container:cashier.xcodeproj">
@@ -61,7 +61,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "049CF88419989C3B000EA8EC"
+            BlueprintIdentifier = "7D57473019A4E78C001A1418"
             BuildableName = "cashier.app"
             BlueprintName = "cashier"
             ReferencedContainer = "container:cashier.xcodeproj">
@@ -79,7 +79,7 @@
       <BuildableProductRunnable>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "049CF88419989C3B000EA8EC"
+            BlueprintIdentifier = "7D57473019A4E78C001A1418"
             BuildableName = "cashier.app"
             BlueprintName = "cashier"
             ReferencedContainer = "container:cashier.xcodeproj">

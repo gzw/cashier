@@ -2,8 +2,8 @@
 //  ZWAppDelegate.m
 //  cashier
 //
-//  Created by Mac on 14-8-11.
-//  Copyright (c) 2014年 zwtech. All rights reserved.
+//  Created by 郭志伟 on 14-8-20.
+//  Copyright (c) 2014年 zw. All rights reserved.
 //
 
 #import "ZWAppDelegate.h"
